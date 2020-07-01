@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IoT Project</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <style>
+html, body {
+  height: 100%;
+}
+body {
+  text-align: center;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF5D4660', endColorstr='#FFF7EEC7');
+  background: url(images/green.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Tahoma', sans-serif;
+}
+    </style>
+     <!-------------------------------    Add JQuery  ------------------------------>
+       <script type="text/javascript" src="/fetchdata.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+</head>
+<body>
+    <!-------------------------------    Navigation Menu    ------------------------------>
+    <ul id = "navigationmenu">
+      <li id = "l01"><a href="welcome.html">HOME</a></li>
+      <li id = "l01"><a href="sensor.html">SENSOR DATA</a></li> 
+      <li id = "l01"><a href="control.html">CONTROL</a></li>
+    </ul> 
+
+    <!----------------------------------    CONTENT    ------------------------------------>   
+    <!----------------------------------    TRONG BỒN    ------------------------------------>   
+    <h1 id = "mix">SENSOR'S DATA IN MIXING CONTAINER</h1>
+    <div class="wrap">
+      <div class="table">
+      <ul>
+      <!------PH------>
+        <li>
+          <div class="top">
+            <h1>PH</h1>
+            <div class="circle" id = "n01"> </div>
+          </div>
+          <div class="bottom">
+            <span>pH</span>
+          </div>
+        </li>
+      <!-------EC------->
+        <li>
+          <div class="top">
+            <h1>EC</h1>
+            <div class="circle" id = "n02"></div>
+          </div>
+          <div class="bottom">
+            <span>mS/cm</span> 
+          </div>
+        </li>
+      <!--------TEMP WATER ------->
+        <li>
+          <div class="top">
+            <h1>WATER'S TEMP</h1>
+          <div class="circle" id = "n03"></div>
+          </div>
+          <div class="bottom">
+            <span>Celcius</span> 
+          </div>
+        </li> 
+      </ul>
+    </div>
+    </div>
+  <!----------------------------------    NGOÀI TRỜI    ------------------------------------>   
+  <h1 id = "en">SENSOR'S DATA IN ENVIROMENT</h1>
+    <div class="wrap1">
+      <div class="table1">
+      <ul>
+         <!--------TEMP ------->
+        <li>
+          <div class="top">
+            <h1>TEMPERATURE</h1>
+          <div class="circle" id = "n04"></div>
+          </div>
+          <div class="bottom">
+            <span>Celcius</span> 
+          </div>
+        </li>
+
+         <!--------HUD------->
+        <li>
+          <div class="top">
+            <h1>HUMIDITY</h1>
+            <div class="circle" id = "n05"></div>
+            </div>
+          <div class="bottom">
+            <span>%</span>
+          </div>
+        </li>
+        <!--------CO2------->
+        <li>
+          <div class="top">
+            <h1>CO2</h1>
+            <div class="circle" id = "n06"></div>
+            </div>
+          <div class="bottom">
+            <span>ppm</span>
+          </div>
+        </li>
+      <!--------LIGHT------->
+      <li>
+        <div class="top">
+          <h1>LIGHT</h1>
+          <div class="circle" id = "n07"></div>
+          </div>
+        <div class="bottom">
+          <span>lux</span>
+        </div>
+      </li>
+      </ul>
+      </div>
+      </div>
+
+      
+</body>
+<script>
+   init_reload();
+    function init_reload(){
+        setInterval( function() {
+                   window.location.reload();
+           },15000);
+    }
+</script>
+</html>
+
+
